@@ -10,6 +10,10 @@ class StudentsController < ApplicationController
   def create
     student = Student.new(params[:student])
     student.save
+<<<<<<< HEAD
+=======
+    redirect_to @student
+>>>>>>> 1ba46697bf6b80dcaeaf181b63edce1160f07ebe
   end
 
   def edit
@@ -18,7 +22,8 @@ class StudentsController < ApplicationController
 
   def update
     @student = Student.find(params[:id])
-    @student.update_attributes(name: params[:name])
+    raise
+    @student.update_attributes(params[:student])
     redirect_to @student
   end
 
