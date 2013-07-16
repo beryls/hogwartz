@@ -8,6 +8,8 @@ class StudentsController < ApplicationController
   end
 
   def create
+    student = Student.new(params[:student])
+    student.save
   end
 
   def edit

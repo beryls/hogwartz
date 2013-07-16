@@ -10,3 +10,11 @@
   </select>
   <button>Create Student</button>
 </form>
+
+<%= form_for @student do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :house %>
+  <%= f.collection_select :house_id, House.all, :id, :name %>
+  <%= f.submit %>
+<% end %>
